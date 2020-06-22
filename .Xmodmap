@@ -1,0 +1,4 @@
+clear mod3
+keycode 202 = Hyper_R NoSymbol Hyper_R
+add mod3 = Hyper_R
+

@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+    transmission-openvpn:
+        volumes:
+            - '/home/mk/Downloads/Torrent/:/data'
+#            - '/home/mk/torrent/TCP/:/etc/openvpn/custom/'
+            - '/etc/localtime:/etc/localtime:ro'
+        environment:
+            - CREATE_TUN_DEVICE=true
+            - OPENVPN_PROVIDER=PUREVPN
+            - OPENVPN_CONFIG=vleu-no2-ovpn-tcp
+            - OPENVPN_USERNAME=purevpn0s8598928
+            - OPENVPN_PASSWORD=o2x1rtey
+            - WEBPROXY_ENABLED=false
+            - LOCAL_NETWORK=192.168.0.0/24
+            - DROP_DEFAULT_ROUTE=true
+#            - TRANSMISSION_WEB_UI=kettu
+            - TRANSMISSION_WEB_HOME=/opt/transmission-ui/kettu
+#            - TRANSMISSION_WEB_HOME=/opt/transmission-ui/combustion-release
+        cap_add:
+            - NET_ADMIN
+        logging:
+            driver: json-file
+            options:
+                max-size: 10m
+        ports:
+            - '9091:9091'
+        image: haugene/transmission-openvpn
