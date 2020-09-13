@@ -22,9 +22,9 @@ sudo apt-get install deja-dup
 echo Stretchly...
 
 sudo apt install libdbusmenu-gtk4 gconf2 libappindicator1 &&
-wget https://github.com/hovancik/stretchly/releases/download/v0.21.1/stretchly_0.21.1_amd64.deb &&
-sudo dpkg -i stretchly_0.21.1_amd64.deb &&
-rm stretchly_0.21.1_amd64.deb
+wget https://github.com/hovancik/stretchly/releases/download/v1.0.0/Stretchly_1.0.0_amd64.deb &&
+sudo dpkg -i Stretchly_1.0.0_amd64.deb &&
+rm Stretchly_1.0.0_amd64.deb
 
 echo "add /opt/stretchly/stretchly to startup applications"
 
